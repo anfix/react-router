@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class'
 import invariant from 'invariant';
 import { createRouteFromReactElement } from './RouteUtils';
 import { formatPattern } from './URLUtils';
@@ -7,7 +8,7 @@ import { falsy } from './PropTypes';
 
 var { string, object } = PropTypes;
 
-export var Redirect = React.createClass({
+export var Redirect = createReactClass({
 
   statics: {
 

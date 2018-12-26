@@ -1,5 +1,6 @@
 import React, { createElement, isValidElement } from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class'
 import warning from 'warning';
 import invariant from 'invariant';
 import { loopAsync } from './AsyncUtils';
@@ -52,7 +53,7 @@ function runTransition(prevState, routes, location, hooks, callback) {
   });
 }
 
-var Router = React.createClass({
+var Router = createReactClass({
 
   mixins: [ RouterContextMixin, ScrollManagementMixin ],
 

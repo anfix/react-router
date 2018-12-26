@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class'
 import invariant from 'invariant';
 import { createRouteFromReactElement } from './RouteUtils';
 import { component, components } from './PropTypes';
@@ -17,7 +18,7 @@ var { string, bool, func } = PropTypes;
  * "active" and their components are rendered into the DOM, nested in the same
  * order as they are in the tree.
  */
-export var Route = React.createClass({
+export var Route = createReactClass({
 
   statics: {
 

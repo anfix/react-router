@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+import createReactClass from 'create-react-class'
 var { object } = PropTypes;
 
 /**
@@ -9,7 +9,7 @@ var { object } = PropTypes;
  *
  *   import { Navigation } from 'react-router';
  *
- *   var MyLink = React.createClass({
+ *   var MyLink = createReactClass({
  *     mixins: [ Navigation ],
  *     handleClick(event) {
  *       event.preventDefault();

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class'
 import invariant from 'invariant';
 var { func, array, shape, object } = PropTypes;
 
@@ -126,7 +127,7 @@ function shallowEqual(a, b) {
 
 
 
-var RouteComponentWrapper = React.createClass({
+var RouteComponentWrapper = createReactClass({
 
   contextTypes: contextTypes,
 
@@ -167,7 +168,7 @@ var RouteComponentWrapper = React.createClass({
 
 });
 
-var AsyncProps = React.createClass({
+var AsyncProps = createReactClass({
 
   statics: {
 

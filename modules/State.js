@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class'
 var { object } = PropTypes;
 
 /**
@@ -9,7 +10,7 @@ var { object } = PropTypes;
  *
  *   import { State } from 'react-router';
  *
- *   var AboutLink = React.createClass({
+ *   var AboutLink = createReactClass({
  *     mixins: [ State ],
  *     render() {
  *       var className = this.props.className;
