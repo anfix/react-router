@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-var { object, string, func } = React.PropTypes;
+var { object, string, func } = PropTypes;
 
 function isLeftClickEvent(event) {
   return event.button === 0;

@@ -1,4 +1,5 @@
 import React, { createElement, isValidElement } from 'react';
+import PropTypes from 'prop-types';
 import warning from 'warning';
 import invariant from 'invariant';
 import { loopAsync } from './AsyncUtils';
@@ -10,7 +11,7 @@ import ScrollManagementMixin from './ScrollManagementMixin';
 import { isLocation } from './Location';
 import Transition from './Transition';
 
-var { arrayOf, func, object } = React.PropTypes;
+var { arrayOf, func, object } = PropTypes;
 
 function runTransition(prevState, routes, location, hooks, callback) {
   var transition = new Transition;

@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import invariant from 'invariant';
 import { createRouteFromReactElement } from './RouteUtils';
 import { formatPattern } from './URLUtils';
 import { falsy } from './PropTypes';
 
-var { string, object } = React.PropTypes;
+var { string, object } = PropTypes;
 
 export var Redirect = React.createClass({
 
@@ -31,7 +32,7 @@ export var Redirect = React.createClass({
     }
 
   },
-  
+
   propTypes: {
     path: string,
     from: string, // Alias for path
@@ -48,7 +49,7 @@ export var Redirect = React.createClass({
       '<Redirect> elements are for router configuration only and should not be rendered'
     );
   }
-  
+
 });
 
 export default Redirect;

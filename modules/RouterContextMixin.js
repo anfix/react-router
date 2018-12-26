@@ -1,8 +1,8 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import invariant from 'invariant';
 import { stripLeadingSlashes, stringifyQuery } from './URLUtils';
 
-var { func, object } = React.PropTypes;
+var { func, object } = PropTypes;
 
 function pathnameIsActive(pathname, activePathname) {
   if (stripLeadingSlashes(activePathname).indexOf(stripLeadingSlashes(pathname)) === 0)
@@ -79,7 +79,7 @@ var RouterContextMixin = {
 
     return path;
   },
- 
+
   /**
    * Pushes a new Location onto the history stack.
    */
@@ -137,7 +137,7 @@ var RouterContextMixin = {
   goForward() {
     this.go(1);
   },
- 
+
   /**
    * Returns true if a <Link> to the given pathname/query combination is
    * currently active.

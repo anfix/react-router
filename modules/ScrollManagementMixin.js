@@ -1,8 +1,8 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import { canUseDOM, setWindowScrollPosition } from './DOMUtils';
 import NavigationTypes from './NavigationTypes';
 
-var { func } = React.PropTypes;
+var { func } = PropTypes;
 
 function getCommonAncestors(branch, otherBranch) {
   return branch.filter(route => otherBranch.indexOf(route) !== -1);

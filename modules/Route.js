@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import invariant from 'invariant';
 import { createRouteFromReactElement } from './RouteUtils';
 import { component, components } from './PropTypes';
 import warning from 'warning';
 
-var { string, bool, func } = React.PropTypes;
+var { string, bool, func } = PropTypes;
 
 /**
  * A <Route> is used to declare which components are rendered to the page when
@@ -31,7 +32,7 @@ export var Route = React.createClass({
 
       return route;
     }
-  
+
   },
 
   propTypes: {

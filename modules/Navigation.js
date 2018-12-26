@@ -1,6 +1,6 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-var { object } = React.PropTypes;
+var { object } = PropTypes;
 
 /**
  * A mixin for components that modify the URL.

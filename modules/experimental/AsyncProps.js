@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import invariant from 'invariant';
-var { func, array, shape, object } = React.PropTypes;
+var { func, array, shape, object } = PropTypes;
 
 var contextTypes = {
   asyncProps: shape({

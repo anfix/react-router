@@ -1,7 +1,7 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import warning from 'warning';
 
-var { object } = React.PropTypes;
+var { object } = PropTypes;
 
 var TransitionHook = {
 

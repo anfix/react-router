@@ -1,6 +1,5 @@
-import React from 'react';
-
-var { object } = React.PropTypes;
+import PropTypes from 'prop-types';
+var { object } = PropTypes;
 
 /**
  * A mixin for components that need to know the path, routes, URL
