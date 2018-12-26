@@ -1,8 +1,9 @@
-import React from 'react';
+// import React from 'react';
+import PropTypes from 'prop-types';
 import Location from './Location';
 import History from './History';
 
-var { func, object, arrayOf, instanceOf, oneOfType, element } = React.PropTypes;
+var { func, object, arrayOf, instanceOf, oneOfType, element } = PropTypes;
 
 function falsy(props, propName, componentName) {
   if (props[propName])
