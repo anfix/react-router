@@ -10,16 +10,17 @@ export function isReactChildren(object) {
 }
 
 function checkPropTypes(componentName, propTypes, props) {
-  componentName = componentName || 'UnknownComponent';
-
-  for (var propName in propTypes) {
-    if (propTypes.hasOwnProperty(propName)) {
-      var error = propTypes[propName](props, propName, componentName);
-
-      if (error instanceof Error)
-        warning(false, error.message);
-    }
-  }
+  return true;
+  // componentName = componentName || 'UnknownComponent';
+  //
+  // for (var propName in propTypes) {
+  //   if (propTypes.hasOwnProperty(propName)) {
+  //     var error = propTypes[propName](props, propName, componentName);
+  //
+  //     if (error instanceof Error)
+  //       warning(false, error.message);
+  //   }
+  // }
 }
 
 export function createRouteFromReactElement(element) {
@@ -43,7 +44,7 @@ export function createRouteFromReactElement(element) {
  * nested.
  *
  *   import { Route, createRoutesFromReactChildren } from 'react-router';
- *   
+ *
  *   var routes = createRoutesFromReactChildren(
  *     <Route component={App}>
  *       <Route path="home" component={Dashboard}/>
