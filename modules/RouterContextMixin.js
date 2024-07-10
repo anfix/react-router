@@ -41,16 +41,6 @@ var RouterContextMixin = {
     };
   },
 
-  childContextTypes: {
-    router: object.isRequired
-  },
-
-  getChildContext() {
-    return {
-      router: this
-    };
-  },
-
   /**
    * Returns a full URL path from the given pathname and query.
    */
