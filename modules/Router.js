@@ -200,7 +200,7 @@ var Router = createReactClass({
     }
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     var { history, routes, children, location, branch, params, components } = this.props;
 
     if (history) {
@@ -231,7 +231,7 @@ var Router = createReactClass({
     }
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     invariant(
       this.props.history === nextProps.history,
       '<Router history> may not be changed'
@@ -267,6 +267,8 @@ var Router = createReactClass({
     var { branch, params, components } = this.state;
     var element = null;
 
+    var routerContext = this;
+
     if (components) {
       element = components.reduceRight((element, components, index) => {
         if (components == null)
@@ -274,7 +276,7 @@ var Router = createReactClass({
 
         var route = branch[index];
         var routeParams = getRouteParams(route, params);
-        var props = Object.assign({}, this.state, { route, routeParams });
+        var props = Object.assign({}, this.state, { route, routeParams, routerContext });
 
         if (isValidElement(element)) {
           props.children = element;
