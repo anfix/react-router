@@ -227,7 +227,9 @@ var Router = createReactClass({
         'props. Try using Router.run to get all the props you need'
       );
 
-      this.setState({ location, branch, params, components });
+      React.startTransition(() => {
+        this.setState({ location, branch, params, components });
+      });
     }
   },
 
