@@ -125,7 +125,9 @@ var Router = createReactClass({
     if (hooks)
       hooks = hooks.map(hook => createTransitionHook(hook, this));
 
-    this.setState({ isTransitioning: true });
+    React.startTransition(() => {
+      this.setState({ isTransitioning: true });
+    });
 
     runTransition(this.state, this.routes, location, hooks, (error, state, transition) => {
       if (error) {
@@ -145,10 +147,14 @@ var Router = createReactClass({
       } else if (state == null) {
         warning(false, 'Location "%s" did not match any routes', location.pathname);
       } else {
-        this.setState(state, this.props.onUpdate);
+        React.startTransition(() => {
+          this.setState(state, this.props.onUpdate);
+        });
       }
 
-      this.setState({ isTransitioning: false });
+      React.startTransition(() => {
+        this.setState({ isTransitioning: false });
+      });
     });
   },
 
